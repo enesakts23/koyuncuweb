@@ -25,7 +25,9 @@ body {
     display: flex;
     align-items: center;
     padding-left: 1rem;
+    padding-right: 1rem;
     height: 100%;
+    justify-content: space-between;
 }
 
 .logo-container {
@@ -46,6 +48,49 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.sidebar-toggle {
+    background: none;
+    border: none;
+    color: #3bd03c;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    transform: scale(1.1);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+.header-icon {
+    background: none;
+    border: none;
+    color: #3bd03c;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.header-icon:hover {
+    transform: scale(1.1);
+}
+
 .layout {
     display: flex;
     min-height: 100vh;
@@ -60,6 +105,11 @@ body {
     height: calc(100vh - 45px);
     position: fixed;
     left: 0;
+    transition: transform 0.3s ease;
+}
+
+.sidebar.collapsed {
+    transform: translateX(-250px);
 }
 
 .nav {
@@ -102,4 +152,52 @@ body {
     flex: 1;
     margin-left: 250px;
     padding: 2rem;
+    transition: margin-left 0.3s ease;
+}
+
+.main-content.expanded {
+    margin-left: 0;
+}
+
+/* Dark Theme Styles */
+[data-theme="dark"] {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .header {
+    background-color: #2d2d2d;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .sidebar {
+    background-color: #2d2d2d;
+    border-right-color: #3d3d3d;
+}
+
+[data-theme="dark"] .nav-item {
+    color: #b3b3b3;
+}
+
+[data-theme="dark"] .nav-item:hover {
+    background-color: #3d3d3d;
+    color: #3bd03c;
+}
+
+[data-theme="dark"] .nav-item.active {
+    background-color: #3bd03c;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .main-content {
+    background-color: #1a1a1a;
+}
+
+/* Theme Toggle Animation */
+.theme-toggle i {
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle.dark i {
+    transform: rotate(360deg);
 } 
