@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoş Geldiniz</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="video-container">
+            <video autoplay muted loop id="myVideo">
+                <source src="media/carpet.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="login-container">
+            <div class="login-form">
+                <h1>Hoş Geldiniz</h1>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Şifre" required>
+                    </div>
+                    <button type="submit" class="login-btn">
+                        <i class="fas fa-sign-in-alt"></i> Giriş Yap
+                    </button>
+                    <p class="register-text">
+                        Hesabınız yok mu? <a href="#" class="register-link">Kayıt Olun</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html> 
