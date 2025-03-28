@@ -7,16 +7,24 @@ document.addEventListener('DOMContentLoaded', function() {
         const email = loginForm.querySelector('input[type="email"]').value;
         const password = loginForm.querySelector('input[type="password"]').value;
         
-        // Here you can add your login logic
+        // Basic validation
+        if (!email || !password) {
+            alert('Lütfen tüm alanları doldurun!');
+            return;
+        }
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('Geçerli bir email adresi giriniz!');
+            return;
+        }
+        
+        // Here you can add your authentication logic
         console.log('Login attempt:', { email, password });
         
-        // Example validation
-        if (email && password) {
-            // Add your authentication logic here
-            alert('Giriş denemesi başarılı!');
-        } else {
-            alert('Lütfen tüm alanları doldurun!');
-        }
+        // Direct redirect to main page
+        window.location.href = 'main.html';
     });
 
     // Add input focus effects

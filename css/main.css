@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.header {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 45px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    height: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo {
+    height: 35px;
+    width: auto;
+}
+
+.company-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3bd03c;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+    padding-top: 45px;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    border-right: 1px solid #eee;
+    padding: 1rem 0;
+    height: calc(100vh - 45px);
+    position: fixed;
+    left: 0;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    color: #666;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.nav-item:hover {
+    background-color: #f8f9fa;
+    color: #3bd03c;
+}
+
+.nav-item.active {
+    background-color: #3bd03c;
+    color: white;
+    border-radius: 25px;
+    margin: 0 1rem;
+    padding: 0.75rem 1.25rem;
+}
+
+.nav-item i {
+    width: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+    padding: 2rem;
+} 
