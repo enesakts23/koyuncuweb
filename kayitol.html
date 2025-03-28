@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoş Geldiniz</title>
+    <title>Kayıt Ol</title>
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -16,26 +16,38 @@
         </div>
         <div class="login-container">
             <div class="login-form">
-                <h1>Hoş Geldiniz</h1>
-                <form id="loginForm">
+                <h1>Kayıt Ol</h1>
+                <form id="registerForm">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Ad Soyad" required>
+                    </div>
                     <div class="input-group">
                         <i class="fas fa-envelope"></i>
                         <input type="email" placeholder="Email" required>
                     </div>
                     <div class="input-group">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" placeholder="Telefon" required>
+                    </div>
+                    <div class="input-group">
                         <i class="fas fa-lock"></i>
                         <input type="password" placeholder="Şifre" required>
                     </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Şifre Tekrar" required>
+                    </div>
                     <button type="submit" class="login-btn">
-                        <i class="fas fa-sign-in-alt"></i> Giriş Yap
+                        <i class="fas fa-user-plus"></i> Kayıt Ol
                     </button>
                     <p class="register-text">
-                        Hesabınız yok mu? <a href="kayitol.html" class="register-link">Kayıt Olun</a>
+                        Zaten hesabınız var mı? <a href="login.html" class="register-link">Giriş Yap</a>
                     </p>
                 </form>
             </div>
         </div>
     </div>
-    <script src="js/login.js"></script>
+    <script src="js/kayitol.js"></script>
 </body>
 </html> 
