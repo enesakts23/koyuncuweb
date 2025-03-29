@@ -1,3 +1,100 @@
-<div class="page-content">
-    <h1>Ayarlar</h1>
+<div class="settings-container">
+    <div class="settings-header">
+        <h2>Ayarlar</h2>
+        <p>Hesap ve uygulama ayarlarınızı buradan yönetebilirsiniz.</p>
+    </div>
+    
+    <div class="settings-section">
+        <h3>Profil Bilgileri</h3>
+        <div class="profile-settings">
+            <div class="profile-image">
+                <img src="images/default-avatar.png" alt="Profil Fotoğrafı" id="profileImage">
+                <button class="change-photo-btn">
+                    <i class="fas fa-camera"></i>
+                    Fotoğrafı Değiştir
+                </button>
+            </div>
+            <div class="profile-form">
+                <div class="form-group">
+                    <label>Ad Soyad</label>
+                    <input type="text" value="Kullanıcı Adı" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>E-posta</label>
+                    <input type="email" value="kullanici@example.com" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Telefon</label>
+                    <input type="tel" value="+90 555 123 4567" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="settings-section">
+        <h3>Görünüm Ayarları</h3>
+        <div class="appearance-settings">
+            <div class="setting-item">
+                <span>Karanlık Mod</span>
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="setting-item">
+                <span>Yazı Boyutu</span>
+                <select class="form-control">
+                    <option>Küçük</option>
+                    <option selected>Normal</option>
+                    <option>Büyük</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="settings-section">
+        <h3>Bildirim Ayarları</h3>
+        <div class="notification-settings">
+            <div class="setting-item">
+                <span>E-posta Bildirimleri</span>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="setting-item">
+                <span>SMS Bildirimleri</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="setting-item">
+                <span>Yeni Sipariş Bildirimleri</span>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="settings-section">
+        <h3>Güvenlik</h3>
+        <div class="security-settings">
+            <button class="btn-change-password">
+                <i class="fas fa-key"></i>
+                Şifre Değiştir
+            </button>
+            <button class="btn-two-factor">
+                <i class="fas fa-shield-alt"></i>
+                İki Faktörlü Doğrulama
+            </button>
+        </div>
+    </div>
+
+    <div class="settings-actions">
+        <button class="btn-save">Değişiklikleri Kaydet</button>
+        <button class="btn-cancel">İptal</button>
+    </div>
 </div> 
