@@ -1,0 +1,12 @@
+.page-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: calc(100vh - 45px);
+}
+
+.page-content h1 {
+    font-size: 2.5rem;
+    color: #3bd03c;
+} 
