@@ -85,6 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
     logoutBtn.addEventListener('click', function(e) {
         e.preventDefault();
         localStorage.removeItem('theme');
-        window.location.href = 'html/login.html';
+        window.location.href = './login.html';
     });
 }); 
