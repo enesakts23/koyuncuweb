@@ -20,24 +20,26 @@
                 <form id="registerForm">
                     <div class="input-group">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Ad Soyad" required>
+                        <input type="text" id="adSoyad" name="adSoyad" placeholder="Ad Soyad" required>
                     </div>
                     <div class="input-group">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Email" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
                     </div>
                     <div class="input-group">
                         <i class="fas fa-phone"></i>
-                        <input type="tel" placeholder="Telefon" required>
+                        <input type="tel" id="telefon" name="telefon" placeholder="Telefon" required>
                     </div>
                     <div class="input-group">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Şifre" required>
+                        <input type="password" id="sifre" name="sifre" placeholder="Şifre" required>
                     </div>
                     <div class="input-group">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Şifre Tekrar" required>
+                        <input type="password" id="sifreTekrar" name="sifreTekrar" placeholder="Şifre Tekrar" required>
                     </div>
+                    <div id="error-message" class="error-message" style="color: red; display: none;"></div>
+                    <div id="success-message" class="success-message" style="color: green; display: none;"></div>
                     <button type="submit" class="login-btn">
                         <i class="fas fa-user-plus"></i> Kayıt Ol
                     </button>
