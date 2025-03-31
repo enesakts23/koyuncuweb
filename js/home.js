@@ -38,4 +38,33 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'translateY(0)';
         });
     });
-}); 
+
+    // Tema değişikliğini dinle
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.attributeName === 'data-theme') {
+                const currentTheme = document.body.getAttribute('data-theme');
+                updateThemeStyles(currentTheme);
+            }
+        });
+    });
+
+    observer.observe(document.body, {
+        attributes: true,
+        attributeFilter: ['data-theme']
+    });
+
+    // İlk yüklemede tema stillerini uygula
+    const currentTheme = document.body.getAttribute('data-theme');
+    updateThemeStyles(currentTheme);
+});
+
+// Tema değişikliğinde stilleri güncelle
+function updateThemeStyles(theme) {
+    const root = document.documentElement;
+    if (theme === 'dark') {
+        root.style.setProperty('--card-shadow', '0 8px 16px rgba(0, 0, 0, 0.3)');
+    } else {
+        root.style.setProperty('--card-shadow', '0 8px 16px rgba(0, 0, 0, 0.1)');
+    }
+} 

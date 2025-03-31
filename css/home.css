@@ -15,6 +15,8 @@
     padding: 2.5rem;
     height: calc(100vh - 80px);
     overflow-y: auto;
+    background: var(--bg-color);
+    color: var(--text-color);
 }
 
 .metrics-grid {
@@ -30,11 +32,20 @@
     padding: 2rem;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .metric-card {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .metric-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .metric-card:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
 }
 
 .metric-card i {
@@ -69,8 +80,16 @@
     color: #22c55e;
 }
 
+[data-theme="dark"] .trend.positive {
+    color: #4ade80;
+}
+
 .trend.negative {
     color: #ef4444;
+}
+
+[data-theme="dark"] .trend.negative {
+    color: #ff6b6b;
 }
 
 .quick-actions {
@@ -79,6 +98,11 @@
     padding: 2rem;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     margin-top: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .quick-actions {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .quick-actions h2 {
@@ -105,14 +129,20 @@
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
+    color: var(--text-color);
 }
 
 .action-btn:hover {
     background: #3bd03c;
     border-color: #3bd03c;
-    color: white;
+    color: var(--bg-color);
     transform: translateY(-4px);
     box-shadow: 0 6px 12px rgba(59, 208, 60, 0.2);
+}
+
+[data-theme="dark"] .action-btn:hover {
+    color: #1a1a1a;
+    box-shadow: 0 6px 12px rgba(59, 208, 60, 0.3);
 }
 
 .action-btn i {
@@ -122,7 +152,11 @@
 }
 
 .action-btn:hover i {
-    color: white;
+    color: var(--bg-color);
+}
+
+[data-theme="dark"] .action-btn:hover i {
+    color: #1a1a1a;
 }
 
 .action-btn span {
