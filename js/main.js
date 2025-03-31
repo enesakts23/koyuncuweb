@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Kullanıcı girişi kontrolü
+    const userData = localStorage.getItem('userData');
+    if (!userData) {
+        window.location.href = 'login.html';
+        return;
+    }
+
+    // Kullanıcı adını göster
+    const user = JSON.parse(userData);
+    const userNameElement = document.getElementById('userName');
+    if (userNameElement && user.name) {
+        userNameElement.textContent = user.name;
+    }
+
     const sidebarToggle = document.querySelector('.sidebar-toggle');
     const sidebar = document.querySelector('.sidebar');
     const mainContent = document.querySelector('.main-content');
@@ -84,6 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     logoutBtn.addEventListener('click', function(e) {
         e.preventDefault();
+        localStorage.removeItem('userData');
         localStorage.removeItem('theme');
         window.location.href = './login.html';
     });

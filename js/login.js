@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const data = await response.json();
             
             if (data.success) {
+                // Kullanıcı bilgilerini localStorage'a kaydet
+                localStorage.setItem('userData', JSON.stringify(data.user));
                 // Başarılı giriş
                 window.location.href = 'main.html';
             } else {

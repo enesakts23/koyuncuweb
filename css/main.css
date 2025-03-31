@@ -200,4 +200,18 @@ body {
 
 .theme-toggle.dark i {
     transform: rotate(360deg);
+}
+
+/* User Info Styles */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--icon-color);
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.user-name {
+    color: var(--icon-color);
 } 
