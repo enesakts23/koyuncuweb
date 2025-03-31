@@ -207,11 +207,13 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: var(--icon-color);
-    font-size: 14px;
+    color: #3bd03c;
+    font-size: 15px;
     margin-right: 10px;
 }
 
 .user-name {
-    color: var(--icon-color);
+    color: #3bd03c;
+    font-size: 15px;
+    font-weight: 500;
 } 
