@@ -1,30 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const loginForm = document.getElementById('loginForm');
-    
-    loginForm.addEventListener('submit', function(e) {
+    document.getElementById('loginForm').addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        const email = loginForm.querySelector('input[type="email"]').value;
-        const password = loginForm.querySelector('input[type="password"]').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const errorMessage = document.getElementById('error-message');
         
-        // Basic validation
-        if (!email || !password) {
-            alert('Lütfen tüm alanları doldurun!');
-            return;
+        try {
+            const response = await fetch('php/login.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password })
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+                // Başarılı giriş
+                window.location.href = 'main.html';
+            } else {
+                // Hata mesajını göster
+                errorMessage.textContent = data.message;
+                errorMessage.style.display = 'block';
+            }
+        } catch (error) {
+            errorMessage.textContent = 'Bir hata oluştu. Lütfen tekrar deneyin.';
+            errorMessage.style.display = 'block';
         }
-
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Geçerli bir email adresi giriniz!');
-            return;
-        }
-        
-        // Here you can add your authentication logic
-        console.log('Login attempt:', { email, password });
-        
-        // Direct redirect to main page
-        window.location.href = 'main.html';
     });
 
     // Add input focus effects
