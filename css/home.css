@@ -13,8 +13,6 @@
 
 .dashboard {
     padding: 2.5rem;
-    height: calc(100vh - 80px);
-    overflow-y: auto;
     background: var(--bg-color);
     color: var(--text-color);
 }
@@ -97,7 +95,6 @@
     border-radius: 12px;
     padding: 2rem;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    margin-top: 2rem;
     border: 1px solid var(--border-color);
 }
 
