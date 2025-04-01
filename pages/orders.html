@@ -1,3 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/orders.css">
+</head>
+<body>
 <div class="page-content">
-    <h1>Siparişler</h1>
-</div> 
+    <div class="orders-container">
+        <div class="orders-header">
+            <h1>Siparişler</h1>
+            <div class="search-box">
+                <input type="text" placeholder="Sipariş ara..." />
+            </div>
+        </div>
+        
+        <table class="orders-table">
+            <thead>
+                <tr>
+                    <th>Sipariş No</th>
+                    <th>Müşteri</th>
+                    <th>Halı Tipi</th>
+                    <th>Boyut</th>
+                    <th>Durum</th>
+                    <th>Tarih</th>
+                    <th>İşlemler</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#1001</td>
+                    <td>Ahmet Yılmaz</td>
+                    <td>Yün Halı</td>
+                    <td>12 m²</td>
+                    <td><span class="status pending">Beklemede</span></td>
+                    <td>2024-02-20</td>
+                    <td class="actions">
+                        <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                        <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#1002</td>
+                    <td>Ayşe Kaya</td>
+                    <td>Bambu Halı</td>
+                    <td>8 m²</td>
+                    <td><span class="status completed">Tamamlandı</span></td>
+                    <td>2024-02-19</td>
+                    <td class="actions">
+                        <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                        <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="pagination">
+            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</div>
+</body>
+</html> 
